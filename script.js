@@ -19,32 +19,32 @@ const team = [
     {
         nome: `Wayne Barnett`,
         ruolo: `Founder&CEO`,
-        foto: `wayne-barnett-founder-ceo.jpg`,
+        foto: `./img/wayne-barnett-founder-ceo.jpg`,
     },
     {
         nome: `Angela Caroll`,
         ruolo: `Chief Editor`,
-        foto: `angela-caroll-chief-editor.jpg`,
+        foto: `./img/angela-caroll-chief-editor.jpg`,
     },
     {
         nome: `Walter Gordon`,
         ruolo: `Office Manager`,
-        foto: `walter-gordon-office-manager.jpg`,
+        foto: `./img/walter-gordon-office-manager.jpg`,
     },
     {
         nome: `Angela Lopez`,
         ruolo: `Social Media Manager`,
-        foto: `angela-lopez-social-media-manager.jpg`,
+        foto: `./img/angela-lopez-social-media-manager.jpg`,
     },
     {
         nome: `Scott Estrada`,
         ruolo: `Developer`,
-        foto: `scott-estrada-developer.jpg`,
+        foto: `./img/scott-estrada-developer.jpg`,
     },
     {
         nome: `Barbara Ramos`,
         ruolo: `Graphic Designer`,
-        foto: `barbara-ramos-graphic-designer.jpg`,
+        foto: `./img/barbara-ramos-graphic-designer.jpg`,
     }
 ]
 // Milestone 0_______________________________________________________________________________________
@@ -59,11 +59,22 @@ for (const persone of team) {
 // Milestone 1_______________________________________________________________________________________
 
 
-// Stampo un bigliettino sul DOM;
+/* Stampo un bigliettino sul DOM;
 for (let persone of team) {
     document.getElementById("stampaTeam").innerHTML += ` <strong>INFO COLLABORATORE:</strong> <br><br> nome: ${persone.nome} <br>   ruolo: ${persone.ruolo} <br>   foto: ${persone.foto} <br><br><br>`
 }
-// Milestone 2_______________________________________________________________________________________
+// Milestone 2_______________________________________________________________________________________ */
+// Creo un ciclo che innietti nell'html le card contenenti le informazioni degli oggetti;
+for (let persone of team) {
+    document.getElementById("stampaTeam").innerHTML += `
+    <div class="col-12 col-md-5 col-lg-3 m-2 pb-2  pt-3 ">
+    <img src=${persone.foto} class="card-img-top " alt="...">
+    <div class="card-body">
+    <h5 class="card-title mt-2">${persone.ruolo}</h5>
+    <p class="card-text">${persone.nome}</p>
+    `
+}
+
 
 
 
