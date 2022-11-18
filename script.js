@@ -68,10 +68,10 @@ for (let persone of team) {
 for (let persone of team) {
     document.getElementById("stampaTeam").innerHTML += `
     <div class="col-12 col-md-5 col-lg-3 m-2 pb-2  pt-3 ">
-    <img src=${persone.foto} class="card-img-top " alt="...">
-    <div class="card-body">
-    <h5 class="card-title mt-2">${persone.ruolo}</h5>
-    <p class="card-text">${persone.nome}</p>
+    <img src=${persone.foto} class="card-img-top" alt="...">
+    <div>
+    <h5 class="mt-2">${persone.ruolo}</h5>
+    <p>${persone.nome}</p>
     `
 }
 
